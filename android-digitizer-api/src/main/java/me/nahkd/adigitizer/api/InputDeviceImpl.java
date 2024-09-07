@@ -101,6 +101,8 @@ class InputDeviceImpl implements InputDevice {
 						break;
 					}
 				}
+
+				stream.close();
 			} catch (Throwable e) {
 				throw new RuntimeException(e);
 			} finally {
