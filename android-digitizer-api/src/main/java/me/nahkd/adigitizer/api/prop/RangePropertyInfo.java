@@ -5,4 +5,8 @@ public record RangePropertyInfo(EventProperty property, int min, int max, int fu
 	public final String toString() {
 		return "%s: Range [%d; %d], Fuzz %d".formatted(property, min, max, fuzz);
 	}
+
+	public double mapToDouble(int input) {
+		return (input - min) / (double) (max - min);
+	}
 }
